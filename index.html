@@ -1,6 +1,149 @@
-<a href="https://github.com/godevbox/godevbox.github.io/blob/main/README.md">Please visit our public repository</a>
-<script>
-setTimeout(function () {
-  window.location.href = "https://github.com/godevbox/godevbox.github.io/blob/main/README.md";
-}, 3000)
-</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>goDevBox.com - Cloud Development Environment</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,700"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./images/dev-box-ico.png" />
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      body,
+      html {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #3a3c5a;
+      }
+
+      body:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* background-image: linear-gradient(to bottom right, #232435, #3a3c5a); */
+        animation: fade-in 0.3s ease;
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slide-up {
+        from {
+          opacity: 0;
+          transform: translateY(100%);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      .logo {
+        margin-bottom: 1rem;
+        animation: slide-up 0.6s cubic-bezier(0.2, 0, 0.2, 1);
+      }
+
+      p {
+        color: rgba(255, 255, 255, 0.5);
+        animation: slide-up 0.7s cubic-bezier(0.2, 0, 0.2, 1);
+        margin: 1rem 0;
+      }
+
+      .links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .link {
+        overflow: hidden;
+      }
+
+      * {
+        transition: all 0.3s cubic-bezier(0.5, 0, 0.5, 1);
+        transition-property: opacity, transform;
+        animation-fill-mode: both;
+      }
+
+      .links:hover > .link:not(:hover) {
+        opacity: 0.5;
+      }
+
+      .link:not(:first-child) {
+        margin-left: 1rem;
+      }
+
+      .link > a {
+        display: inline-block;
+        text-decoration: none;
+        color: #4d4d4d;
+        font-weight: bold;
+        animation: slide-up 0.8s calc(var(--i) * 0.1s)
+          cubic-bezier(0.2, 0, 0.2, 1);
+        animation-fill-mode: both;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a
+      target="_blank"
+      href="https://github.com/godevbox/godevbox.github.io/blob/main/README.md"
+      class="logo"
+      ><img src="./images/dev-box.png" alt="Fetchq" width="250"
+    /></a>
+    <ul class="links">
+      <li class="link" style="--i: 0">
+        <a target="_blank" href="https://github.com/godevbox/godevbox.github.io"
+          >GitHub</a
+        >
+      </li>
+      <li class="link" style="--i: 1">
+        <a
+          target="_blank"
+          href="https://github.com/godevbox/godevbox.github.io/blob/main/README.md#features-comparison-matrix"
+          >Features</a
+        >
+      </li>
+      <li class="link" style="--i: 1">
+        <a target="_blank" href="https://alpha.godevbox.com">Try it out!</a>
+      </li>
+      <!-- <li class="link" style="--i: 3">
+        <a target="_blank" href="https://spectrum.chat/fetchq">Community</a>
+      </li> -->
+    </ul>
+  </body>
+</html>
